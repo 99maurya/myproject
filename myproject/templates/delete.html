@@ -1,0 +1,15 @@
+
+
+
+
+
+<h1>Are you sure you want to delete the Product: {{ product.product_name }}?</h1>
+<p>{{ product.product_descriptions }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, delete it</button>
+</form>
+
+<br>
+<a href="/homepage/{product.id}">Cancel</a>
